@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(/img/back.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+html {
+    font-size: 16px;
+}
+
+.conteiner {
+    padding-top: 5%;
+}
+
+form {
+    font-size: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    min-height: 24rem; 
+}
+
+form div, button {
+    border-radius: 0.3rem;
+}
+
+input {
+    outline:none;
+    width: 90%;
+    height: 4rem;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #d3d3d3;
+    color: #ffffff;
+    font-size: 0.8rem;
+    padding-left: 0%;
+    padding-right: 10%;
+    float: right;
+    padding-top: 2%;
+}
+
+input::placeholder {
+    color: #d3d3d3;
+}
+
+/*первый способ*/
+i {
+    position: relative;
+    height: 4rem;
+    width: 10%;
+    color: #ffffff;
+    font-size: 0.8rem;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+i::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+/*второй способ*/
+/* .input2 {
+    width: 100%;
+    background-image: url(/img/reg_user.svg);
+    background-repeat: no-repeat;
+    background-size: 0.8rem;
+    background-position: 0.8rem center;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+} */
+
+label {
+    font-size: 0.8rem;
+    float: left;
+    height: 4rem;
+    padding-top: 2%;
+    display: flex;
+    align-items: center;
+    margin-left: 0.5rem;
+    color: #ffffff;
+}
+
+.check_box {
+    float: left;
+    margin-left: 0.5rem;
+    border: none;
+    padding-top: 2%;
+    width: auto;
+    display: block;
+    height: 4rem;
+}
+.check_box input {
+    width: 0.8rem;
+    height: 100%;
+}
+
+form > p {
+    padding-top: 2%;
+    padding-right: 0.5rem;
+    height: 4rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+a {
+    font-size: 0.8rem;
+    color: #ffffff;
+}
+
+form > div {
+    height: 4rem;
+    width: 100%;
+}
+
+.btn_div, .or_div, .social_div {
+    padding-top: 1.5rem;
+}
+
+button {
+    width: 100%;
+    height: 100%;
+    background-color: #ef3f56;
+    color: #ffffff;
+    font-size: 1rem;
+    background-color: #ef3f56;
+    border: none;
+}
+
+.or_div {
+    display: flex;
+    justify-content: center;
+}
+
+.or {
+    background-color: #ef3f56;
+    height: calc(2.5rem);
+    width: calc(2.5rem);
+    font-size: 1rem;
+    color: #ffffff;
+    border-radius: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social_div {
+    display: flex;
+    justify-content: space-between;
+    height: 3.5rem;
+}
+
+.social_div div {
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+.social_one {
+    background-color: #3b5998;
+}
+.social_two {
+    background-color: #26a7de;
+}
+
+.social_div i {
+    height: 100%;
+    width: 20%;
+    border: none;
+    border-right: 1px dotted #d3d3d3;
+}
+
+.social_div p {
+    font-size: 0.8rem;
+    padding-left: 0.5rem;
+}
+
+
+.span {
+    height: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    background-color: yellow;
+    font-size: 1rem;
+    color: black;
+    transition-property: height;
+    transition-duration: 300ms;
+}
+.span_trans {
+    height: 4rem;
+}
+
+input:focus + i::after {
+    content: attr(data-title); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1rem;
+    width: 900%;
+    font-size: 0.6rem;
+    background-color: #26a7de;
+    text-align: center;
+    position: absolute;
+    top: 105%;
+    left: 100%;
+    color: #ffffff;
+    border-radius: 0.2rem;
+}
+
+input:invalid {
+    color: red;
+}
+input:invalid + i::after {
+    color: red;
+}
